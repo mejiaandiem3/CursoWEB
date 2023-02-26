@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="crud, tec, lerdo, app, programacion, web"
+    <meta name="description" content="Práctica de un CRUD utilizando bootstrap, jquery, html,php. Curso de programacion de aplicaciones web modulo 2">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+    <!--aqui realizo la instalacion del bootstrap-->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <!--aqui termina este apartado-->
+
+</head>
+<body>
+
+    <div class="container">
+        <form id="frmpeliculas" method="post">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                     <h2 class="panel title"> Catálogo de películas</h2>
+                </div>
+                    <div class="panel-body">
+                        <table id="tablapeliculas" class="table table-bordered tabe-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID_Pelicula</th>
+                                    <th>Título</th>
+                                    <th>Género</th>
+                                    <th>Duración</th>
+                                    <th>Clasificación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </form>
+    </div>
+    <script src="js/app.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            ajaxPeliculas('seleccionar','Scripts/peliculas.php','frmpeliculas');
+        });
+
+    </script>
+</body>
+</html>
