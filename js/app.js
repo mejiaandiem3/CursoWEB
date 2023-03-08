@@ -6,18 +6,19 @@ var ajaxPeliculas = function(accion,url,formulario){
         $.ajax({
             url:url,
             data:datos,
-            type:'POST',
-            datatype:'JSON',
+            type:"POST",
+            datatype:"JSON",
             success:function(response){
 
                 if(response.peliculas !== null){
                     $.each(response.peliculas,function(index,pelicula){
-                        $('#tablaPeliculas tbody').append(
+                        $('#tablapeliculas tbody').append(
                             "<tr><td>"+pelicula.id+"</td>"+
                             "<td>"+pelicula.titulo+"</td>"+
                             "<td>"+pelicula.genero+"</td>"+
                             "<td>"+pelicula.duracion+"</td>"+
-                            "<td>"+pelicula.clasificacion+"</td>"+"</tr>"
+                            "<td>"+pelicula.clasificacion+"</td>"+
+                            "</tr>"
                         );
 
                     });

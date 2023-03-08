@@ -5,10 +5,10 @@
     <meta name="keywords" content="crud, tec, lerdo, app, programacion, web"
     <meta name="description" content="Práctica de un CRUD utilizando bootstrap, jquery, html,php. Curso de programacion de aplicaciones web modulo 2">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Peliculas</title>
    
     <!--aqui realizo la instalacion del bootstrap-->
-    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
     <!--aqui termina este apartado-->
@@ -26,7 +26,7 @@
                         <table id="tablapeliculas" class="table table-bordered tabe-hover">
                             <thead>
                                 <tr>
-                                    <th>ID_Pelicula</th>
+                                     <th>ID_Pelicula</th>
                                     <th>Título</th>
                                     <th>Género</th>
                                     <th>Duración</th>
@@ -45,6 +45,7 @@
     <script type="text/javascript">
 
         $(document).ready(function(){
+            //alert("Funcionando");
             ajaxPeliculas('seleccionar','Scripts/peliculas.php','frmpeliculas');
         });
 

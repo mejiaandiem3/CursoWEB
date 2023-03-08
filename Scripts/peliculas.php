@@ -10,12 +10,12 @@ extract($_POST);
             $db=new Database();
             $db->conectarBD();
 
-            $accion="seleccionar";
+          
 
         switch($accion){
             case 'seleccionar':
-                $video['peliculas']=$db->seleccionar("USE bd_cursoweb");
-                $video['peliculas']=$db->seleccionar("SELECT * FROM peliculas");
+                $video['peliculas'] = $db->seleccionar("USE bd_cursoweb");
+                $video['peliculas'] = $db->seleccionar("SELECT * FROM peliculas");
                 break;
         }
 
